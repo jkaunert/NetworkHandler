@@ -144,10 +144,10 @@ Additionally, included are several classes and types:
 
 # NetworkHandler (CocoaPods)
 
-[![CI Status](https://img.shields.io/travis/jkaunert/MuhNetworkControllerLibrary.svg?style=flat)](https://travis-ci.org/jkaunert/NetworkHandler)
-[![Version](https://img.shields.io/cocoapods/v/MuhNetworkControllerLibrary.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
-[![License](https://img.shields.io/cocoapods/l/MuhNetworkControllerLibrary.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
-[![Platform](https://img.shields.io/cocoapods/p/MuhNetworkControllerLibrary.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
+[![CI Status](https://img.shields.io/travis/jkaunert/NetworkHandler.svg?style=flat)](https://travis-ci.org/jkaunert/NetworkHandler)
+[![Version](https://img.shields.io/cocoapods/v/NetworkHandler.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
+[![License](https://img.shields.io/cocoapods/l/NetworkHandler.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
+[![Platform](https://img.shields.io/cocoapods/p/NetworkHandler.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
 
 ## Example
 
