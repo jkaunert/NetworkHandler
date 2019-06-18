@@ -137,13 +137,43 @@ Additionally, included are several classes and types:
 		* Alternatively, you could copy all the swift files in the `NetworkHandler` folder to your project, if you're masochistic.
 	* CocoaPods
 		* If you're looking for an open source contribution, here's your chance!
-1. Import to any files you want to use it in
+2. Import to any files you want to use it in
 	`import NetworkHandler`
-1. Use it.
+3. Use it.
+
+
+# NetworkHandler (CocoaPods)
+
+[![CI Status](https://img.shields.io/travis/jkaunert/MuhNetworkControllerLibrary.svg?style=flat)](https://travis-ci.org/jkaunert/NetworkHandler)
+[![Version](https://img.shields.io/cocoapods/v/MuhNetworkControllerLibrary.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
+[![License](https://img.shields.io/cocoapods/l/MuhNetworkControllerLibrary.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
+[![Platform](https://img.shields.io/cocoapods/p/MuhNetworkControllerLibrary.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Demo directory first.
+
+
+## Installation
+
+NetworkHandler is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'NetworkHandler'
+```
+
+## Author
+
+Michael Redig, Joshua Kaunert
+
+## License
+
+NetworkHandler is available under the MIT license. See the LICENSE file for more info.
 
 ##### Todo
 * Readme
 	* demo task as return value and cancelling
 	* demo mocking data
 * create build targets for other platforms.
-* podfile? meh
+
