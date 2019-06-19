@@ -195,4 +195,4 @@ NetworkHandler is available under the MIT license. See the LICENSE file for more
 	* demo task as return value and cancelling
 	* demo mocking data
 * create build targets for other platforms.
-* create LICENSE file
+
