@@ -1,15 +1,43 @@
-# Network Handler
+# NetworkHandler (Carthage + CocoaPods)
+
+[![CI Status](https://img.shields.io/travis/jkaunert/NetworkHandler.svg?style=flat)](https://travis-ci.org/jkaunert/NetworkHandler)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Version](https://img.shields.io/cocoapods/v/NetworkHandler.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
+[![License](https://img.shields.io/cocoapods/l/NetworkHandler.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
+[![Platform](https://img.shields.io/cocoapods/p/NetworkHandler.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)
+
 
 I wrote this because I found myself repeating a lot of boilerplate code when sending and receiving data with APIs. Essentially, every time I'd want to make a network call, I'd have to check for errors, check the response code, check if there's data, check if the data is valid, and finally use the data. Every. Time. (Sure, you could skip a couple of those steps occasionally, but then you might run into an unforeseen error).
 
 NetworkHandler primarily consists of three main functions:
 
-* `transferMahOptionalDatas`:
-	* Sometimes you don't care if the server provides data or there may be a situation where the data MIGHT get returned or it MIGHT not, just as long as the transaction was successful otherwise. In these situations, you can use `transferMahOptionalDatas` and it'll provide you with `Data?` when successful, and a `NetworkError` when failure occurs.
-* `transferMahDatas`:
-	* This is for situations when you know a successful transaction results in legitimate data. You are then provided with `Data` upon success, and a `NetworkError` upon failure.
-* `transferMahCodableDatas`:
-	* This is for the specific use case when dealing with JSON apis. You construct your model, `DemoModel` for example, then simply tell the function this is specifically the type you want as a result. (`transferMahCodableDatas(with: urlRequest, completion: (Result<DemoModel, NetworkError>) -> Void)`) Upon success, it'll handle *all of the decoding for you* and simply provide you with data in the custom type you requested! (upon success) Upon failure, of course, it will provide a `NetworkError`.
+ ```swift
+ transferMahDeltas()
+ ```
+  
+* Sometimes you don't care if the server provides data or there may be a situation where the data MIGHT get returned or it MIGHT not, just as long as the transaction was successful otherwise. In these situations, you can use 
+
+	```swift
+	transferMahOptionalDatas()
+	``` 
+and it'll provide you with `Data?` when successful, and a `NetworkError` when failure occurs.
+
+```swift
+transferMahDatas()
+```
+	
+* This is for situations when you know a successful transaction results in legitimate data. You are then provided with `Data` upon success, and a `NetworkError` upon failure.
+
+```swift
+transferMahCodableDatas()
+```
+
+* This is for the specific use case when dealing with JSON apis. You construct your model, `DemoModel` for example, then simply tell the function this is specifically the type you want as a result. 
+
+	```swift 
+	transferMahCodableDatas(with: urlRequest, completion: (Result<DemoModel, NetworkError>) -> Void)
+	```
+Upon success, it'll handle *all of the decoding for you* and simply provide you with data in the custom type you requested! (upon success) Upon failure, of course, it will provide a `NetworkError`.
 
 ### Features
 This essentially reduces the boilerplate you need to deal with when you make an HTTP network request. It makes use of the Swift 5 Result type for super powers in reducing redundancies.
@@ -132,40 +160,31 @@ Additionally, included are several classes and types:
 1. Download and install
 	* Carthage
 		* I recommend using Carthage. Simply add the following line to your cartfile. (and of course, follow the remaining carthage instructions as usual)
-			`github "mredig/NetworkHandler"`
-	* Brute Force Files
-		* Alternatively, you could copy all the swift files in the `NetworkHandler` folder to your project, if you're masochistic.
+			
+               `github "mredig/NetworkHandler"`
+	
 	* CocoaPods
-		* If you're looking for an open source contribution, here's your chance!
+        * NetworkHandler is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
+    
+           
+			```ruby
+			pod 'NetworkHandler'
+			```
+
+   * Brute Force Files
+       * Alternatively, you could copy all the swift files in the `NetworkHandler` folder to your project, if you're masochistic.
+
 2. Import to any files you want to use it in
-	`import NetworkHandler`
+	
+	```swift
+	import NetworkHandler
+	```
+
 3. Use it.
 
+## Authors
 
-# NetworkHandler (CocoaPods)
-
-<!--[![CI Status](https://img.shields.io/travis/jkaunert/NetworkHandler.svg?style=flat)](https://travis-ci.org/jkaunert/NetworkHandler)-->
-<!--[![Version](https://img.shields.io/cocoapods/v/NetworkHandler.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)-->
-<!--[![License](https://img.shields.io/cocoapods/l/NetworkHandler.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)-->
-<!--[![Platform](https://img.shields.io/cocoapods/p/NetworkHandler.svg?style=flat)](https://cocoapods.org/pods/NetworkHandler)-->
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Demo directory first.
-
-
-## Installation
-
-NetworkHandler is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'NetworkHandler'
-```
-
-## Author
-
-Michael Redig, Joshua Kaunert
+Michael Redig, "Podified" by Joshua Kaunert
 
 ## License
 
@@ -176,4 +195,4 @@ NetworkHandler is available under the MIT license. See the LICENSE file for more
 	* demo task as return value and cancelling
 	* demo mocking data
 * create build targets for other platforms.
-
+* create LICENSE file
